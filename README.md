@@ -11,6 +11,17 @@ This repository holds the Runner's releases and the files its installer is built
 Each release is tagged `runner-<commit>`, and a Runner updates itself only to releases
 published here, checked against each release's `SHA256SUMS`.
 
+Each release has:
+
+- `RotavoxRunnerSetup-<version>-<commit>.exe`, the installer. The **Installer** workflow
+  (`.github/workflows/installer.yml`) builds it with Inno Setup on GitHub's Windows
+  runner when the release is published, from the release's own package, and adds it to
+  `SHA256SUMS`. The installer isn't code-signed during the beta, so Windows SmartScreen
+  warns before it runs.
+- `rotavox-runner-<commit>.zip`, the package the installer unpacks and that a Runner
+  updates itself from.
+- `SHA256SUMS`.
+
 ## Third-party software in each release
 
 - **Node.js** (MIT): the Windows x64 runtime, from nodejs.org, checked against its

@@ -1,0 +1,81 @@
+# Builds the Runner's setup .exe (ADR-0006 §4) when a release is published here, from that
+# release's own package, and attaches it to the same release with its line in SHA256SUMS.
+# The Inno Setup script ships inside the package (installer/rotavox-runner.iss), so each
+# installer matches the Runner it installs. Needs no secret: only this repo's own token.
+name: Installer
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release to build the installer for (runner-<commit>)"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: installer-${{ github.event.release.tag_name || inputs.tag }}
+
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 20
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Download the package and check it against SHA256SUMS
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ($env:TAG -notmatch '^runner-([0-9a-f]{40})$') { throw "Not a Runner release tag: $env:TAG" }
+          $rev = $Matches[1]
+          gh release download $env:TAG --pattern SHA256SUMS --pattern 'rotavox-runner-*.zip' --dir pkg
+          $zipName = "rotavox-runner-$($rev.Substring(0, 12)).zip"
+          $line = Get-Content pkg/SHA256SUMS | Where-Object { $_ -match "^([0-9a-f]{64})\s+\*?$([regex]::Escape($zipName))$" } | Select-Object -First 1
+          if (-not $line) { throw "SHA256SUMS has no line for $zipName" }
+          $want = ($line -split '\s+')[0]
+          $got = (Get-FileHash "pkg/$zipName" -Algorithm SHA256).Hash.ToLower()
+          if ($got -ne $want) { throw "$zipName has SHA-256 $got, not $want" }
+          Expand-Archive "pkg/$zipName" -DestinationPath pkg/unpacked
+          $dir = (Resolve-Path "pkg/unpacked/$($zipName -replace '\.zip$', '')").Path
+          $m = Get-Content "$dir/runner/manifest.json" -Raw | ConvertFrom-Json
+          if ($m.revision -ne $rev) { throw "The package is of $($m.revision), not $rev" }
+          if ($m.version -notmatch '^\d+\.\d+\.\d+$') { throw "Unexpected version: $($m.version)" }
+          if (-not (Test-Path "$dir/installer/rotavox-runner.iss")) { throw "This package has no installer script (it predates the installer)." }
+          "REV=$rev" >> $env:GITHUB_ENV
+          "VERSION=$($m.version)" >> $env:GITHUB_ENV
+          "PKG=$dir" >> $env:GITHUB_ENV
+          "Runner $($m.version) at $rev, checked."
+
+      - name: Build the setup .exe with Inno Setup
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $iscc = "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe"
+          if (-not (Test-Path $iscc)) { choco install innosetup -y --no-progress; if ($LASTEXITCODE) { throw 'Installing Inno Setup failed' } }
+          (Get-Item $iscc).VersionInfo.ProductVersion
+          New-Item -ItemType Directory -Force out | Out-Null
+          & $iscc /Qp "/DAppVersion=$env:VERSION" "/DRev=$env:REV" "/DPackageDir=$env:PKG" "/DOutputDir=$((Resolve-Path out).Path)" "$env:PKG\installer\rotavox-runner.iss"
+          if ($LASTEXITCODE) { throw "ISCC failed (exit $LASTEXITCODE)" }
+          Get-ChildItem out
+
+      - name: Attach it to the release
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $exe = Get-ChildItem out -Filter 'RotavoxRunnerSetup-*.exe' | Select-Object -First 1
+          if (-not $exe) { throw 'No setup .exe was built' }
+          $hash = (Get-FileHash $exe.FullName -Algorithm SHA256).Hash.ToLower()
+          # Keep the package's line (self-update reads it) and replace any earlier setup line.
+          $lines = @(Get-Content pkg/SHA256SUMS | Where-Object { $_ -and $_ -notmatch 'RotavoxRunnerSetup-' }) + "$hash  $($exe.Name)"
+          [IO.File]::WriteAllText((Join-Path (Get-Location) 'SHA256SUMS'), (($lines -join "`n") + "`n"))
+          gh release upload $env:TAG $exe.FullName --clobber
+          if ($LASTEXITCODE) { throw 'Uploading the installer failed' }
+          gh release upload $env:TAG SHA256SUMS --clobber
+          if ($LASTEXITCODE) { throw 'Uploading SHA256SUMS failed' }
+          "Attached $($exe.Name) ($hash) to $env:TAG"
