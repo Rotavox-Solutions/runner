@@ -1,0 +1,252 @@
+ROTAVOX RUNNER LICENSE AGREEMENT
+
+Version 2026-11-21
+
+PLEASE READ THIS AGREEMENT BEFORE YOU INSTALL OR USE THE SOFTWARE. BY CHOOSING "I ACCEPT THE AGREEMENT", OR BY DOWNLOADING, INSTALLING, COPYING OR USING THE SOFTWARE IN ANY WAY (INCLUDING AN UNATTENDED OR SILENT INSTALLATION AND ANY AUTOMATIC UPDATE), YOU AGREE TO BE BOUND BY IT. IF YOU DO NOT AGREE, DO NOT INSTALL OR USE THE SOFTWARE, AND DELETE EVERY COPY YOU HAVE.
+
+THIS AGREEMENT DISCLAIMS WARRANTIES (SECTION 17), LIMITS ROTAVOX'S LIABILITY, INCLUDING FOR ITS OWN NEGLIGENCE (SECTION 18), REQUIRES YOU TO INDEMNIFY ROTAVOX (SECTION 19), AND WAIVES JURY TRIALS AND CLASS ACTIONS (SECTION 23). THE SOFTWARE IS PRE-RELEASE (BETA) SOFTWARE (SECTION 7).
+
+This Rotavox Runner License Agreement (the "Agreement") is a legal agreement between Radiant Ventures LLC, doing business as Rotavox ("Rotavox", "we", "us" or "our"), and the radio station, company or other organization for which the Software is installed or used ("you"). If you install, accept or use the Software for a station or another organization, you confirm that you have the authority to bind it to this Agreement, and "you" means that organization. If you have no such authority, or no organization stands behind your use, "you" also means you personally. The Software is licensed only to stations, businesses and other organizations for their own operations. It is not offered to consumers for personal, family or household use.
+
+1. DEFINITIONS
+
+"Software" means the Rotavox Runner, Runner setup, the Rotavox Library Export tool, their installers and scripts, and any other program or file that Rotavox supplies for you to run on your own computers, in any form, together with every update, upgrade, patch and new version of them and any documentation for them.
+
+"Rotavox Service" means the hosted Rotavox service at app.rotavox.com and related sites, which is governed by the Rotavox Terms of Service at https://app.rotavox.com/terms (the "Terms of Service").
+
+"Station" means one radio station or program service that has its own station account in the Rotavox Service.
+
+"Runner Key" means a key or other credential that the Rotavox Service issues so that the Software can connect to it for a Station.
+
+"Third-Party Components" means software owned by others that is included with the Software, such as Node.js, NSSM and open-source libraries.
+
+"Rotavox Parties" means Rotavox and its affiliates, licensors and suppliers, and their owners, members, managers, officers, employees, contractors, agents, successors and assigns.
+
+2. LICENSE
+
+2.1 Grant. For as long as you comply with this Agreement and have the right to use the Rotavox Service for a Station (in a trial, a beta or a paid subscription), Rotavox grants you a limited, personal, revocable, non-exclusive, non-transferable, non-sublicensable license to install and run the Software, in the form Rotavox supplies it, on computers that you own or control, only to connect that Station's own playout system and music library to the Rotavox Service for that Station's own internal operations.
+
+2.2 Copies. You may make the copies that are needed to install and run the Software as this Agreement allows, and a reasonable number of backup copies. Every copy stays subject to this Agreement and must keep all of Rotavox's notices.
+
+2.3 Licensed, not sold. The Software is licensed, not sold. You receive no title to or ownership of the Software or of any copy of it. Rotavox reserves every right that this Agreement does not expressly grant. There are no implied licenses, and none arises by estoppel, course of dealing or otherwise.
+
+3. OWNERSHIP
+
+Rotavox and its licensors own, and will keep, all right, title and interest in and to the Software and the Rotavox Service, including their code, structure, sequence and organization, their scheduling methods and rules, the interfaces and protocols by which the Software and the Rotavox Service communicate, their designs, look and feel and documentation, and all copyrights, trade secrets, patent rights, trademarks and other intellectual property rights in any of them, anywhere in the world. The Software is protected by copyright, trade secret and other laws and by international treaties. The Software contains Rotavox's trade secrets, whether or not any part of it can be read by a person.
+
+4. RESTRICTIONS
+
+You must not do any of the following, and must not allow or help anyone else to do them:
+
+(a) copy the Software, except as Section 2.2 allows;
+
+(b) modify, adapt, translate or create derivative works of the Software;
+
+(c) reverse engineer, decompile, disassemble, decode, de-minify or deobfuscate the Software, or otherwise try to derive or reconstruct its source code, underlying ideas, algorithms, methods, data structures, file formats or the protocols by which it communicates with the Rotavox Service, except only to the extent that applicable law expressly allows it despite this restriction, and then only after you have told Rotavox in writing what you intend to do and why;
+
+(d) sell, resell, rent, lease, lend, sublicense, assign, distribute, publish, host or otherwise make the Software available to anyone else, or use it to provide a service bureau, hosting, outsourcing or similar service for anyone else;
+
+(e) use the Software for any station or organization other than your own Station, or with a Runner Key that was not issued for that Station;
+
+(f) remove, hide or change any copyright, trademark, confidentiality or other notice in or on the Software;
+
+(g) circumvent, disable or interfere with any Runner Key, sign-in, integrity check, update mechanism, usage limit or other technical measure in the Software or the Rotavox Service;
+
+(h) connect to the Rotavox Service's interfaces for the Software with anything other than the unmodified Software, or build, use or distribute any other program that imitates or replaces the Software or communicates with those interfaces;
+
+(i) use the Software, or anything you learn from it, to design, build, train, improve, market or support any product or service that competes with Rotavox, or access the Software at all if you are, or act for, a competitor of Rotavox, unless Rotavox has agreed in writing first;
+
+(j) publish or disclose to anyone the results of any benchmark, performance test, security test or other evaluation of the Software without Rotavox's written consent;
+
+(k) probe, scan or test the Software or the Rotavox Service for vulnerabilities, or attempt to gain access to accounts, stations, systems or data that are not yours;
+
+(l) use the Software or its code to train, fine-tune or evaluate any machine-learning or artificial-intelligence model, or submit the Software's code to any such system in order to analyze, reproduce or replace the Software;
+
+(m) combine or distribute the Software with any other software in a way that would require the Software, or any part of it, to be disclosed, licensed or distributed under an open-source or other public license;
+
+(n) use the Software in violation of any law or regulation, or of anyone's rights; or
+
+(o) use the Software after this Agreement or your right to use the Rotavox Service has ended.
+
+5. RUNNER KEYS AND SECURITY
+
+Runner Keys are confidential. Keep each one secret, use it only on the computer and for the Station it was issued for, and revoke it in the Rotavox Service if the computer is replaced or you believe the key has been disclosed. You are responsible for everything done with your Runner Keys and on the computers where you install the Software, whether or not you authorized it. Tell Rotavox promptly at the address in Section 28 if you believe a Runner Key or the Software has been misused or copied. Rotavox may revoke or replace a Runner Key at any time.
+
+6. WHAT THE SOFTWARE DOES, AND YOUR CONSENT
+
+6.1 On your computer. You understand and agree that the Software, depending on which parts of it you use:
+
+(a) is installed and runs with administrator rights, as Windows services and a scheduled task that start by themselves and keep running in the background;
+
+(b) reads your playout software's settings and connects to its database and its control interface, using credentials that it finds on the computer or that you supply, and stores those credentials and your Runner Key on the computer;
+
+(c) reads from and writes to your playout software's database, and controls its playlist and playback, in order to load and pace the logs you approve and to record what was played;
+
+(d) sends information to the Rotavox Service over the internet, including details of your music library, information about your playout software such as its version and configuration, what was played and when, the state and version of the Software and of the computer it runs on, and diagnostic and error information; and
+
+(e) depends on the Rotavox Service, and may stop working in whole or in part if a Runner Key is revoked, if your right to use the Rotavox Service ends or is suspended, or if the Rotavox Service or your internet connection is unavailable. When the Software stops, control of playout stays with, or returns to, your own playout software.
+
+6.2 Automatic updates. The Software checks for, downloads and installs updates by itself, without asking you and without showing this Agreement again. An update may add, change or remove features, may restart the Software, and may briefly return playout to your playout software while it does so. You consent to these updates. You may not be able to refuse or delay an update or to keep using an earlier version, and earlier versions may stop working. Every update is part of the Software and is licensed under this Agreement, or under the newer version of this Agreement that comes with the update (Section 24).
+
+6.3 Your authority. You confirm that you have the right to install the Software on each computer where you install it, to give it the access described in this Section, and to use your playout software and your music library with it, and that doing so breaks no agreement or license that binds you.
+
+7. PRE-RELEASE SOFTWARE
+
+The Software is pre-release (beta) software. It is not at the level of performance, reliability or compatibility of a finished commercial product. It may not be digitally signed, in which case Windows may warn you before it runs. It may contain errors and defects, may behave unexpectedly, may interrupt or change what your Station plays, and may lose or corrupt data. Rotavox may change it in ways that break how you use it, limit it, suspend it, withdraw it or reset anything in it at any time, without notice and without liability to you, and has no obligation to release a commercial version or to keep any feature. Do not rely on the Software as your Station's only means of staying on the air. This Section applies for as long as Rotavox describes the Software, or the part of it concerned, as beta, preview, early access or pre-release, and for the Software it prevails over anything to the contrary in the Terms of Service.
+
+8. YOUR RESPONSIBILITIES
+
+8.1 What airs. You alone are responsible for everything your Station broadcasts or streams, or fails to broadcast or stream; for reviewing and approving every log; and for complying with every law, rule, license and contract that applies to your Station. That includes the rules of your broadcast regulator, station identification, emergency alerting, sponsorship and political programming rules, content standards, and music and performance licensing and royalty reporting. The Software does none of these things for you.
+
+8.2 Fallback and monitoring. You will keep in working order a means of staying on the air that does not depend on the Software, such as your playout software's own automatic mode, and you will monitor your Station's output. The Software is not a monitoring, silence-detection or alerting system.
+
+8.3 Backups. You will back up your playout software's database, its settings and your music library before you install the Software and regularly after that, in a form you can restore without the Software.
+
+8.4 Your systems. You are responsible for your computers, operating system, network, internet connection, security and playout software, and for keeping them compatible with the Software.
+
+8.5 Other people's software. The Software works with products that Rotavox does not make or control, including RadioDJ. They are licensed to you by their owners under their own terms, and Rotavox is not responsible for them or for changes to them. Rotavox is not affiliated with, endorsed by or sponsored by the makers of RadioDJ or of any other playout software, and their names are used only to identify their products.
+
+9. NO HIGH-RISK USE
+
+The Software is not designed or intended for emergency alerting, public warning, life safety, or any other use in which a failure, delay or error could lead to death, personal injury, or serious damage to property or the environment. You will not use it or rely on it for any such purpose. Your Station's emergency alerting equipment and procedures must work without the Software.
+
+10. CONFIDENTIALITY
+
+10.1 The non-public parts of the Software are Rotavox's confidential information and trade secrets. They include its code, structure and methods, the interfaces and protocols it uses with the Rotavox Service, Runner Keys, features that Rotavox has not announced publicly, its performance, defects and security weaknesses, and anything Rotavox tells you about its plans ("Confidential Information").
+
+10.2 You will keep Confidential Information secret with at least the care you use for your own confidential information, and no less than reasonable care; use it only to use the Software as this Agreement allows; and disclose it only to your own staff and contractors who need it for that purpose and who are bound to protect it at least as this Agreement requires. You are responsible for their compliance.
+
+10.3 If you find a defect or a security weakness in the Software, you will report it privately to Rotavox at the address in Section 28 and will not disclose it to anyone else.
+
+10.4 These duties do not apply to information that you can show is or becomes public through no fault of yours, was lawfully known to you without restriction before you received it, or was lawfully given to you by someone free to disclose it. If a law or court order requires you to disclose Confidential Information, you will give Rotavox prompt notice where the law allows and disclose only what is required.
+
+10.5 These duties continue for five years after this Agreement ends, and for any trade secret for as long as it remains a trade secret.
+
+11. FEEDBACK
+
+If you give Rotavox ideas, suggestions, bug reports or other feedback about the Software or the Rotavox Service ("Feedback"), you assign to Rotavox all rights in that Feedback. To the extent any right cannot be assigned, you grant Rotavox a perpetual, irrevocable, worldwide, royalty-free, fully paid, transferable and sublicensable license to use that Feedback for any purpose. Rotavox owes you no payment or credit for Feedback and is free to act on it or not. Feedback does not include your music library data or play history, which the Terms of Service govern.
+
+12. DATA AND PRIVACY
+
+Information that the Software sends to the Rotavox Service is handled as the Terms of Service and the Rotavox Privacy Policy at https://app.rotavox.com/privacy describe. Rotavox may also collect and use technical, diagnostic and usage information about the Software and the computers it runs on to operate, secure, support and improve the Software and the Rotavox Service and to check compliance with this Agreement. You confirm that you have every right and consent needed to send that information to Rotavox, including any information about your staff. You consent to the information being transferred to and processed in the United States and wherever Rotavox's service providers operate.
+
+13. THIRD-PARTY COMPONENTS
+
+Third-Party Components are licensed to you by their owners under their own license terms, which are included with the Software or identified in its notices (for example node-LICENSE.txt and the files ending in .LEGAL.txt). Those terms, and not Sections 2 to 4 of this Agreement, govern your use of the Third-Party Components, and nothing in this Agreement limits any right those terms give you. Sections 17 and 18 apply to the Third-Party Components as they do to the rest of the Software, and Rotavox provides them "AS IS".
+
+14. NO SUPPORT OBLIGATION
+
+Rotavox has no obligation under this Agreement to support, maintain, correct or update the Software, or to keep it compatible with any version of Windows, RadioDJ or any other product. Any support, update or help that Rotavox chooses to give is given under this Agreement and may be changed or stopped at any time.
+
+15. VERIFICATION AND SUSPENSION
+
+The Software reports its version, its Runner Key and how it is being used to the Rotavox Service, and Rotavox may use that information to check that you are complying with this Agreement. Rotavox may suspend the Software or a Runner Key at once, without notice, if it reasonably believes that you have breached this Agreement, that a Runner Key has been disclosed or misused, or that suspension is needed to protect the Rotavox Service, another station or anyone's rights.
+
+16. TERM AND TERMINATION
+
+16.1 Term. This Agreement starts when you first accept it or first download, install or use the Software, whichever comes first, and continues until it ends under this Section.
+
+16.2 By you. You may end this Agreement at any time by uninstalling the Software and destroying every copy of it.
+
+16.3 Automatically. This Agreement and your license end automatically, without notice, if you breach Section 2, 4, 5 or 10, or when your right to use the Rotavox Service for the Station ends for any reason.
+
+16.4 By Rotavox. Rotavox may end this Agreement or suspend your license at any time by giving you notice. While Section 7 applies, it may do so without notice.
+
+16.5 What happens then. When this Agreement ends, every right it gives you ends. You must stop using the Software at once, uninstall it, destroy every copy in your possession or control, and, if Rotavox asks, confirm in writing that you have done so. Ending this Agreement does not limit any other remedy Rotavox has.
+
+16.6 Survival. Sections 1, 3, 4, 8.1, 10, 11, 12, 16.5 and 16.6, and Sections 17 through 28, survive the end of this Agreement, as does any other term that by its nature should.
+
+17. DISCLAIMER OF WARRANTIES
+
+TO THE FULLEST EXTENT THE LAW ALLOWS, THE SOFTWARE IS PROVIDED "AS IS", "AS AVAILABLE" AND WITH ALL FAULTS, AND THE ENTIRE RISK AS TO ITS QUALITY, PERFORMANCE AND RESULTS IS YOURS. THE ROTAVOX PARTIES DISCLAIM ALL WARRANTIES, CONDITIONS AND REPRESENTATIONS OF EVERY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY OR ARISING FROM A COURSE OF DEALING OR USAGE OF TRADE, INCLUDING ANY WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, QUIET ENJOYMENT, ACCURACY AND SYSTEM INTEGRATION.
+
+WITHOUT LIMITING THAT, THE ROTAVOX PARTIES DO NOT WARRANT THAT THE SOFTWARE WILL BE UNINTERRUPTED, TIMELY, SECURE OR FREE OF ERRORS, DEFECTS OR HARMFUL CODE; THAT IT WILL WORK WITH RADIODJ OR ANY OTHER PLAYOUT SOFTWARE, OR WITH ANY VERSION OF THEM OR OF WINDOWS; THAT YOUR STATION WILL STAY ON THE AIR; THAT ANY LOG WILL BE LOADED, PLAYED OR TIMED AS YOU EXPECT, OR WILL MEET YOUR FORMAT, TIMING, CONTRACTUAL OR LEGAL REQUIREMENTS; THAT WHAT THE SOFTWARE RECORDS OR REPORTS AS PLAYED WILL BE COMPLETE OR ACCURATE; OR THAT YOUR DATA, DATABASE OR MUSIC LIBRARY WILL NOT BE LOST, CHANGED OR DAMAGED. NO ADVICE OR INFORMATION FROM ROTAVOX, SPOKEN OR WRITTEN, CREATES ANY WARRANTY.
+
+18. LIMITATION OF LIABILITY
+
+18.1 TO THE FULLEST EXTENT THE LAW ALLOWS, NO ROTAVOX PARTY WILL BE LIABLE TO YOU, OR TO ANYONE CLAIMING THROUGH YOU, FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY OR PUNITIVE DAMAGES; FOR ANY LOSS OF PROFITS, REVENUE (INCLUDING ADVERTISING, UNDERWRITING AND SPONSORSHIP REVENUE), AUDIENCE, GOODWILL, BUSINESS OR DATA; FOR ANY SILENCE, DEAD AIR OR TIME OFF THE AIR, OR ANY PROGRAMMING, ANNOUNCEMENT OR IDENTIFICATION THAT WAS MISSED, REPEATED OR AIRED AT THE WRONG TIME; FOR ANY MAKE-GOOD, REFUND OR CREDIT THAT YOU OWE ANYONE; FOR ANY FINE, FORFEITURE OR PENALTY FROM A REGULATOR OR A LICENSING BODY; FOR ANY LOSS OF OR DAMAGE TO A DATABASE, MUSIC LIBRARY, COMPUTER OR OTHER EQUIPMENT; OR FOR THE COST OF SUBSTITUTE SOFTWARE OR SERVICES; IN EACH CASE ARISING OUT OF OR RELATING TO THIS AGREEMENT OR THE SOFTWARE.
+
+18.2 TO THE FULLEST EXTENT THE LAW ALLOWS, THE TOTAL LIABILITY OF ALL ROTAVOX PARTIES TOGETHER, FOR ALL CLAIMS ARISING OUT OF OR RELATING TO THIS AGREEMENT OR THE SOFTWARE, WILL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID ROTAVOX FOR THE ROTAVOX SERVICE FOR THE STATION CONCERNED IN THE 12 MONTHS BEFORE THE EVENT THAT FIRST GAVE RISE TO LIABILITY, AND (B) ONE HUNDRED U.S. DOLLARS (US $100). THIS IS ONE LIMIT FOR ALL CLAIMS TOGETHER. IT IS NOT IN ADDITION TO THE LIMIT IN THE TERMS OF SERVICE: ANY AMOUNT A ROTAVOX PARTY PAYS UNDER EITHER AGREEMENT REDUCES WHAT IS AVAILABLE UNDER BOTH.
+
+18.3 SECTIONS 18.1 AND 18.2 APPLY TO EVERY KIND OF CLAIM, WHETHER IN CONTRACT, WARRANTY, TORT, STRICT LIABILITY, STATUTE OR ANY OTHER THEORY, EVEN IF THE LOSS WAS CAUSED IN WHOLE OR IN PART BY THE NEGLIGENCE OF A ROTAVOX PARTY, EVEN IF A ROTAVOX PARTY KNEW OR WAS TOLD THAT THE LOSS WAS POSSIBLE, AND EVEN IF A REMEDY FAILS OF ITS ESSENTIAL PURPOSE. THEY DO NOT APPLY TO LIABILITY THAT THE LAW DOES NOT ALLOW TO BE EXCLUDED OR LIMITED.
+
+18.4 YOU AGREE THAT THESE LIMITS ARE A FAIR ALLOCATION OF RISK, THAT ROTAVOX WOULD NOT PROVIDE THE SOFTWARE WITHOUT THEM, AND THAT THEY ARE AN ESSENTIAL PART OF THIS AGREEMENT. Some places do not allow some of these exclusions or limits. Where that is so, they apply to you only as far as the law there allows.
+
+19. INDEMNIFICATION
+
+19.1 You will defend, indemnify and hold harmless the Rotavox Parties from and against every claim, demand, action, investigation and proceeding brought by anyone else, and all resulting damages, losses, liabilities, fines, penalties, settlements, costs and expenses (including reasonable attorneys' fees), that arise out of or relate to:
+
+(a) anything your Station broadcasts or streams, or fails to broadcast or stream;
+
+(b) your music library, your data and any other content you use with the Software, including any claim that it infringes someone's rights or that royalties or license fees are unpaid;
+
+(c) your use of the Software in breach of this Agreement or of any law, regulation or license;
+
+(d) your computers, network and playout software, and your right to use them with the Software; or
+
+(e) anything done with your Runner Keys.
+
+19.2 THIS SECTION 19 APPLIES EVEN IF A CLAIM ARISES IN PART FROM THE NEGLIGENCE OF A ROTAVOX PARTY, BUT NOT TO THE EXTENT THAT A CLAIM ARISES FROM A ROTAVOX PARTY'S GROSS NEGLIGENCE OR WILLFUL MISCONDUCT.
+
+19.3 Rotavox will tell you of a claim within a reasonable time, and a delay relieves you only as far as it harms your defense. You may control the defense with counsel reasonably acceptable to Rotavox, and Rotavox may take part with its own counsel at its own cost. You will not settle a claim in a way that admits fault for, or places any obligation on, a Rotavox Party without Rotavox's written consent. If you do not take up the defense promptly, Rotavox may defend the claim at your expense.
+
+20. EXPORT CONTROLS AND SANCTIONS
+
+The Software is subject to United States export control and sanctions laws. You will not export, re-export, transfer or use it in breach of those laws or of the laws of any other country that apply. You confirm that you are not located in, organized under the laws of, or ordinarily resident in a country or region that is subject to a United States embargo, and that you are not on, or owned or controlled by anyone on, any United States government list of restricted or prohibited parties.
+
+21. U.S. GOVERNMENT USERS
+
+The Software and its documentation are "commercial computer software" and "commercial computer software documentation" as those terms are used in 48 C.F.R. 12.212 and 48 C.F.R. 227.7202. If the Software is acquired by or for the United States government, it is licensed with only the rights that this Agreement gives every other licensee.
+
+22. INJUNCTIVE RELIEF
+
+A breach of Section 2, 4, 5 or 10 would cause Rotavox harm that money alone cannot repair. If you breach or threaten to breach any of them, Rotavox is entitled to an injunction and other equitable relief, without posting a bond or proving actual damages, in addition to every other remedy it has.
+
+23. GOVERNING LAW, COURTS AND WAIVERS
+
+23.1 Governing law. This Agreement, and any dispute arising out of or relating to it or to the Software, is governed by the laws of the State of Texas, United States, without regard to its conflict-of-laws rules. The United Nations Convention on Contracts for the International Sale of Goods and the Uniform Computer Information Transactions Act do not apply.
+
+23.2 Courts. Any such dispute will be heard only in the state or federal courts located in Texas, and you and Rotavox consent to the jurisdiction of those courts and give up any objection that they are an inconvenient forum. Rotavox may, however, ask any court that has jurisdiction for an injunction or other relief to protect its intellectual property or its Confidential Information.
+
+23.3 JURY TRIAL WAIVER. TO THE FULLEST EXTENT THE LAW ALLOWS, YOU AND ROTAVOX EACH GIVE UP THE RIGHT TO A TRIAL BY JURY IN ANY DISPUTE ARISING OUT OF OR RELATING TO THIS AGREEMENT OR THE SOFTWARE.
+
+23.4 NO CLASS ACTIONS. TO THE FULLEST EXTENT THE LAW ALLOWS, YOU MAY BRING CLAIMS AGAINST A ROTAVOX PARTY ONLY FOR YOURSELF, AND NOT AS A PLAINTIFF OR A CLASS MEMBER IN ANY CLASS, COLLECTIVE, CONSOLIDATED OR REPRESENTATIVE PROCEEDING.
+
+23.5 Time to bring a claim. To the fullest extent the law allows, you must bring any claim arising out of or relating to this Agreement or the Software within two years after the claim arises, or it is barred for good.
+
+23.6 Costs of enforcement. If Rotavox brings an action to enforce Section 2, 4, 5 or 10 and prevails, you will pay Rotavox's reasonable attorneys' fees and costs.
+
+24. CHANGES TO THIS AGREEMENT
+
+Rotavox may change this Agreement. The new version will come with an update to the Software, or be made available in the Rotavox Service or sent to your Station's admin, and it shows its version at the top. By continuing to use the Software after a new version takes effect, you accept it. If you do not accept it, stop using the Software and uninstall it. No other change to this Agreement is valid unless it is in writing and signed by Rotavox.
+
+25. THIS AGREEMENT AND THE TERMS OF SERVICE
+
+This Agreement governs the Software. The Terms of Service govern the Rotavox Service. Both apply to you, and this Agreement is in addition to the Terms of Service. If they conflict about the Software, this Agreement prevails. Together they are the entire agreement between you and Rotavox about the Software and replace every earlier proposal, statement and understanding about it. A written agreement about the Software that both you and Rotavox have signed prevails over this Agreement where the two conflict.
+
+26. TRADEMARKS
+
+"Rotavox", "Rotavox Runner", the Rotavox logo and Rotavox's other names and marks are trademarks of Rotavox. This Agreement gives you no right to use them, except to refer truthfully to the Software by name. You will not use them, or anything confusingly similar, in your own product, service, business or domain names, and all goodwill from any use of them belongs to Rotavox.
+
+27. GENERAL
+
+27.1 Transfer. You may not assign or transfer this Agreement or any right under it, by contract, merger, change of control, operation of law or otherwise, without Rotavox's written consent, and any attempt to do so is void. Rotavox may assign or transfer this Agreement, in whole or in part, without notice or consent, including to an affiliate, to a successor, or to a company formed to own or operate Rotavox. This Agreement binds and benefits each party's permitted successors and assigns.
+
+27.2 Severability. If a court finds any part of this Agreement unenforceable, that part will be enforced as far as the law allows, and the rest stays in effect.
+
+27.3 No waiver. A failure or delay by Rotavox in enforcing any term is not a waiver of it. A waiver counts only if it is in writing and signed by Rotavox.
+
+27.4 Others who may rely on this Agreement. Each Rotavox Party may enforce Sections 17, 18 and 19 for itself. No one else who is not a party has any rights under this Agreement.
+
+27.5 Notices. Rotavox may give you notice by email to a Station admin's address in the Rotavox Service, through the Rotavox Service, or through the Software. You give Rotavox notice by email to the address in Section 28. You agree that this Agreement and notices under it may be made and delivered electronically, and that your acceptance by electronic means is as binding as a signature.
+
+27.6 Events beyond control. Rotavox is not responsible for any failure or delay caused by events beyond its reasonable control.
+
+27.7 Reading this Agreement. Headings are for convenience only. "Including" means "including without limitation". This Agreement is written in English, and the English version controls over any translation. No rule that an agreement is read against the party that wrote it applies.
+
+28. CONTACT
+
+Radiant Ventures LLC, doing business as Rotavox
+Email: legal@rotavox.com
+
+Copyright (c) 2026 Radiant Ventures LLC and its licensors. All rights reserved.

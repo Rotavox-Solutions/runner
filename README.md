@@ -22,6 +22,16 @@ Each release has:
   updates itself from.
 - `SHA256SUMS`.
 
+## License
+
+The Rotavox Runner and the Rotavox Library Export are proprietary software. They are
+licensed, not sold, under the [Rotavox Runner License Agreement](LICENSE). The installer
+shows it before anything is installed, and each zip carries it as `LICENSE.txt`.
+Downloading, installing or using them means you accept it.
+
+This repository is public so that stations can download releases. That gives no other
+right to anything in it.
+
 ## Third-party software in each release
 
 - **Node.js** (MIT): the Windows x64 runtime, from nodejs.org, checked against its
